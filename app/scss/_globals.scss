@@ -1,0 +1,83 @@
+// Обнуление
+*,
+*::before,
+*::after {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+   text-decoration: none;
+}
+
+ul,
+ol,
+li {
+   list-style: none;
+
+   img {
+      vertical-align: top;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-weight: inherit;
+      font-size: inherit;
+   }
+}
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   font-family: "Roboto";
+}
+
+// Огранічующий контейнер, всюди ставити
+._container {
+   max-width: 1240px;
+   padding: 0 20px;
+   margin: 0px auto; //вистраює любий блочний блок по середині, якщо він ограничений по ширині
+}
+
+// Visibility
+//.hide-for-mobile {
+//   @include breakpoint-down(medium) {
+//      display: none;
+//   }
+//} // це додавати до менюшки, шоб скрити повні назви
+
+//.hide-for-desktop {
+//   @include breakpoint-up(large) {
+//      display: none;
+//   }
+//} // це додавати до гамбургера, шоб скрити його на великих екранах
+
+// ШРИФТИ
+
+//.test-wrap {
+//   display: flex;
+//   justify-content: space-between;
+
+//   > * {
+//      margin: 0 20px;
+//   }
+
+//   input,
+//   select {
+//      font-size: 16px;
+//      border: 1px solid black;
+//      padding: 10px 20px;
+//      line-height: 20px;
+//      color: red;
+//      display: block;
+//      width: 100%;
+//   }
+//}

@@ -1,0 +1,89 @@
+.services {
+   &__container {
+   }
+
+   &__title {
+      text-align: center;
+      font-size: 56px;
+      line-height: 60px;
+      font-weight: 900;
+      margin: 0px 0px 50px 0px;
+   }
+
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0px -15px;
+   }
+
+   &__item {
+      position: relative;
+      padding: 50px 30px;
+      background: #ffffff;
+      border: 4px solid #1daeff;
+      box-shadow: 0px 17px 50px rgba(143, 144, 166, 0.32);
+      border-radius: 30px;
+      margin: 0 15px 30px;
+      flex: 0 0 calc(33.333% - 30px);
+      max-width: calc(33.333% - 30px);
+   }
+}
+
+.item-services {
+   &__name {
+      text-decoration: underline;
+      padding: 0px 0px 40px 0px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 30px;
+      line-height: 45px;
+      font-weight: 700;
+   }
+
+   &__price {
+      margin: 0px 0px 40px 0px;
+      text-align: center;
+      font-size: 50px;
+      line-height: 60px;
+      font-weight: 600;
+   }
+
+   &__text {
+      li {
+         padding: 0px 0px 25px 0px;
+         font-weight: 500;
+         text-align: center;
+         font-size: 18px;
+      }
+      li:last-child {
+         font-size: 20px;
+         font-weight: 900;
+         padding: 0px 0px 0px 0px;
+         margin: 0px 0px 40px 0px;
+      }
+   }
+   &__button {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      height: 50px;
+      background: none;
+      border: 10px;
+      background: #1daeff;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 30px;
+      transition: all 0.3s ease 0s;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+
+      &:hover {
+         background: #fff;
+         color: #1daeff;
+         border: 2px solid #1daeff;
+      }
+   }
+}
