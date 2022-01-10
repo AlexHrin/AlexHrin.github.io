@@ -23,17 +23,15 @@
 }
 
 .box-stages {
-   //border-top: 5px solid black;
    display: flex;
    margin: 0px 0px 10px 0px;
 
    &__number {
-      font-size: 200px;
+      font-size: 210px;
       text-align: center;
       align-self: center;
-      //padding: 60px 0px 0px 0px;
       flex: 1 1 20%;
-      color: #1daeff;
+      color: #777777;
    }
 
    &__column {

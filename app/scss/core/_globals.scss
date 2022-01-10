@@ -47,6 +47,26 @@ body {
    margin: 0px auto; //вистраює любий блочний блок по середині, якщо він ограничений по ширині
 }
 
+._btn {
+   cursor: pointer;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   background: $red;
+   color: #fff;
+   font-weight: 700;
+   transition: all 0.3s ease 0s;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   border-radius: 6px;
+
+   &:hover {
+      background: #fff;
+      color: $red;
+      border: 2px solid $red;
+   }
+}
+
 // Visibility
 //.hide-for-mobile {
 //   @include breakpoint-down(medium) {

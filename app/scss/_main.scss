@@ -41,28 +41,9 @@
    }
 
    &__button {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 370px;
       height: 50px;
-      background: none;
-      border: 10px;
-      background: #1daeff;
-      color: #fff;
       font-weight: 700;
-      border-radius: 30px;
-      margin: 0px 0px 0px 0px;
-      transition: all 0.3s ease 0s;
-      font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-
-      &:hover {
-         background: #fff;
-         color: #1daeff;
-         border: 2px solid #1daeff;
-      }
+      font-size: 18px;
    }
 }

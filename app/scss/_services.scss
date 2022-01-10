@@ -20,30 +20,41 @@
       position: relative;
       padding: 50px 30px;
       background: #ffffff;
-      border: 4px solid #1daeff;
+      border-radius: 10px;
+      border: 4px solid black;
       box-shadow: 0px 17px 50px rgba(143, 144, 166, 0.32);
-      border-radius: 30px;
       margin: 0 15px 30px;
       flex: 0 0 calc(33.333% - 30px);
       max-width: calc(33.333% - 30px);
    }
 }
 
+.color1 {
+   color: $darkred;
+}
+
+.color2 {
+   color: $darkred;
+}
+
+.color3 {
+   color: $darkred;
+}
+
 .item-services {
+   text-align: center;
    &__name {
-      text-decoration: underline;
       padding: 0px 0px 40px 0px;
-      text-align: center;
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: 40px;
       line-height: 45px;
-      font-weight: 700;
+      font-weight: 900;
    }
 
    &__price {
       margin: 0px 0px 40px 0px;
       text-align: center;
-      font-size: 50px;
+      font-size: 40px;
       line-height: 60px;
       font-weight: 600;
    }
@@ -63,27 +74,9 @@
       }
    }
    &__button {
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 250px;
       height: 50px;
-      background: none;
-      border: 10px;
-      background: #1daeff;
-      color: #fff;
       font-weight: 700;
-      border-radius: 30px;
-      transition: all 0.3s ease 0s;
       font-size: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-
-      &:hover {
-         background: #fff;
-         color: #1daeff;
-         border: 2px solid #1daeff;
-      }
    }
 }
