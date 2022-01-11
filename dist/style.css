@@ -10,7 +10,7 @@
 
 a,
 a:visited,
-a:hover {
+a:focus a:hover {
   text-decoration: none;
 }
 
@@ -88,77 +88,86 @@ body {
   border: 2px solid #d55d50;
 }
 
+.header {
+  margin: 0px 0px 40px 0px;
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 134px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .header__menu {
-  margin: 0px 0px 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.header__number {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 20px;
-  padding-left: 45px;
-  font-weight: 800;
-}
-
-.menu__item {
+.menu-header__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
 }
 
-.menu__link {
+.menu-header__link {
   letter-spacing: 0.2em;
   font-weight: 900;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   text-transform: uppercase;
-  margin: 0px 0px 0px 50px;
+  padding: 0px 0px 0px 40px;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
+  color: black;
+  text-decoration: underline;
 }
 
-.menu__link:hover {
+.menu-header__link:hover {
   color: #a5362a;
 }
 
-.header__phone-btn {
-  width: 200px;
-  height: 50px;
+.phone-header {
+  margin: 0px 0px 0px 40px;
+}
+
+.phone-header__btn {
+  margin: 0px 0px 10px 0px;
   font-weight: 700;
   font-size: 16px;
-  margin: 0px 0px 0px 50px;
-  padding: 5px 20px;
-  margin-bottom: 5px;
+  padding: 10px 15px;
+}
+
+.phone-header__number {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.main {
+  margin: 0px 0px 40px 0px;
 }
 
 .main__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main__body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
-  padding: 106px 0px 80px 50px;
-  position: relative;
-  z-index: 2;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .main__image {
@@ -168,12 +177,7 @@ body {
 }
 
 .main img {
-  padding: 120px 0px 0px 0px;
   width: 100%;
-}
-
-.body-main {
-  max-width: 450px;
 }
 
 .body-main__title {
@@ -187,14 +191,19 @@ body {
   font-size: 26px;
   line-height: 36px;
   font-weight: 500;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .body-main__button {
-  width: 370px;
-  height: 50px;
+  width: 100%;
+  max-width: 370px;
+  padding: 10px 10px;
   font-weight: 700;
   font-size: 18px;
+}
+
+.services {
+  margin: 0px 0px 40px 0px;
 }
 
 .services__title {
@@ -202,7 +211,7 @@ body {
   font-size: 56px;
   line-height: 60px;
   font-weight: 900;
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .services__items {
@@ -216,7 +225,7 @@ body {
 
 .services__item {
   position: relative;
-  padding: 50px 30px;
+  padding: 40px 30px;
   background: #ffffff;
   border-radius: 10px;
   border: 4px solid black;
@@ -246,9 +255,9 @@ body {
 }
 
 .item-services__name {
-  padding: 0px 0px 40px 0px;
+  margin: 0px 0px 40px 0px;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 43px;
   line-height: 45px;
   font-weight: 900;
 }
@@ -276,14 +285,13 @@ body {
 }
 
 .item-services__button {
-  width: 250px;
-  height: 50px;
+  padding: 20px 20px;
   font-weight: 700;
   font-size: 16px;
 }
 
 .info {
-  margin: 50px 0px 0px 0px;
+  margin: 0px 0px 60px 0px;
 }
 
 .info__title {
@@ -291,7 +299,7 @@ body {
   font-size: 56px;
   line-height: 60px;
   font-weight: 900;
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 40px 0px;
 }
 
 .info__text p {
@@ -303,7 +311,7 @@ body {
 }
 
 .input {
-  margin: 80px 0px 0px 0px;
+  margin: 0px 0px 60px 0px;
 }
 
 .input__container {
@@ -320,7 +328,7 @@ body {
 
 .input__image img {
   padding: 40px 0px 0px 0px;
-  width: 90%;
+  max-width: 90%;
 }
 
 .body-input {
@@ -356,17 +364,18 @@ body {
   font-size: 20px;
   background: #ffffff;
   border: 3px solid #a5362a;
-  border-radius: 30px;
   background-color: rgba(143, 144, 166, 0.32);
   margin: 0px 0px 30px 0px;
 }
 
 .body-input__button {
-  margin-top: 10px;
-  width: 250px;
-  height: 50px;
+  padding: 15px 30px;
   font-weight: 700;
   font-size: 16px;
+}
+
+.stages {
+  margin: 0px 0px 40px 0px;
 }
 
 .stages__title {
@@ -374,7 +383,6 @@ body {
   font-size: 56px;
   line-height: 60px;
   font-weight: 900;
-  margin: 50px 0px 0px 0px;
 }
 
 .stages__text {
@@ -432,7 +440,7 @@ body {
 .footer {
   background-color: black;
   color: white;
-  padding: 80px 0px 20px 0px;
+  padding: 80px 0px 80px 0px;
 }
 
 .footer__container {
@@ -518,15 +526,13 @@ body {
   font-size: 14px;
   background: #ffffff;
   border: 2px solid #a5362a;
-  border-radius: 30px;
   background-color: rgba(143, 144, 166, 0.32);
   margin: 0px 0px 10px 0px;
   max-width: 180px;
 }
 
 .backcall__button {
-  width: 250px;
-  height: 40px;
+  padding: 10px 10px;
   font-weight: 600;
   font-size: 12px;
 }

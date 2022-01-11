@@ -1,71 +1,71 @@
 .header {
+   margin: 0px 0px 40px 0px;
    &__container {
       display: flex;
-      min-height: 134px;
       align-items: center;
+      text-align: center;
    }
 
    &__logo {
    }
 
    &__menu {
-      margin: 0px 0px 0px 10px;
+      display: flex;
    }
-   &__number {
-      text-align: center;
-      margin-top: 5px;
-      font-size: 20px;
-      padding-left: 45px;
-      font-weight: 800;
+
+   &__phone {
    }
 }
 
-.menu {
-   &__list {
-   }
-
+.menu-header {
    &__item {
       display: flex;
       align-items: center;
-      text-align: center;
    }
 
    &__link {
       letter-spacing: 0.2em;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 22px;
       text-transform: uppercase;
-      margin: 0px 0px 0px 50px;
+      padding: 0px 0px 0px 40px;
       transition: color 0.3s ease 0s;
-
-      //@include breakpoint-down(lg) {
-      //   font-size: 25px;
-      //}
-
-      //@include breakpoint-down(md) {
-      //   font-size: 16px;
-      //}
-
-      //@include breakpoint-up(md) {
-      //   font-size: 25px;
-      //}
-
-      //@include breakpoint-up(lg) {
-      //   font-size: 32px;
-      //}
-
+      color: black;
+      text-decoration: underline;
       &:hover {
          color: $darkred;
       }
    }
 }
-.header__phone-btn {
-   width: 200px;
-   height: 50px;
-   font-weight: 700;
-   font-size: 16px;
-   margin: 0px 0px 0px 50px;
-   padding: 5px 20px;
-   margin-bottom: 5px;
+
+.phone-header {
+   margin: 0px 0px 0px 40px;
+   &__btn {
+      margin: 0px 0px 10px 0px;
+      font-weight: 700;
+      font-size: 16px;
+      padding: 10px 15px;
+   }
+
+   &__number {
+      font-size: 18px;
+      font-weight: 800;
+   }
 }
+
+//@include breakpoint-down(lg) {
+//   font-size: 25px;
+//}
+
+//@include breakpoint-down(md) {
+//   font-size: 16px;
+//}
+
+//@include breakpoint-up(md) {
+//   font-size: 25px;
+//}
+
+//@include breakpoint-up(lg) {
+//   font-size: 32px;
+//}
