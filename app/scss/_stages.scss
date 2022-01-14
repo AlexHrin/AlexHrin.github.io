@@ -14,6 +14,9 @@
          line-height: 40px;
          margin: 0px 0px 20px 0px;
       }
+      @include breakpoint-down(dw3) {
+         font-size: 36px;
+      }
    }
 
    &__text {
@@ -26,6 +29,9 @@
          font-size: 18px;
          line-height: 26px;
          margin: 0px 0px 20px 0px;
+      }
+      @include breakpoint-down(dw3) {
+         font-size: 16px;
       }
    }
 
@@ -46,6 +52,9 @@
       @include breakpoint-down(dw2) {
          font-size: 140px;
       }
+      @include breakpoint-down(dw3) {
+         font-size: 100px;
+      }
    }
 
    &__column {
@@ -62,6 +71,9 @@
          font-size: 24px;
          margin: 0px 0px 10px 0px;
       }
+      @include breakpoint-down(dw3) {
+         font-size: 20px;
+      }
    }
 
    &__text {
@@ -72,6 +84,9 @@
       @include breakpoint-down(dw2) {
          font-size: 18px;
          line-height: 20px;
+      }
+      @include breakpoint-down(dw3) {
+         font-size: 14px;
       }
    }
 

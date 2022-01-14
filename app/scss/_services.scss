@@ -9,7 +9,7 @@
       line-height: 60px;
       font-weight: 900;
       margin: 0px 0px 40px 0px;
-      @media (max-width: 860px) {
+      @include breakpoint-down(dw2) {
          font-size: 40px;
          margin: 0px 0px 20px 0px;
       }
@@ -20,7 +20,7 @@
       flex-wrap: wrap;
       margin: 0px -15px;
       @include breakpoint-down(dw3) {
-         display: inline;
+         display: block;
       }
    }
 
@@ -37,6 +37,10 @@
       @include breakpoint-down(dw2) {
          padding: 20px 15px;
       }
+      @include breakpoint-down(dw3) {
+         display: block;
+         max-width: 300px;
+      }
    }
 }
 
@@ -46,6 +50,9 @@
 
 .item-services {
    text-align: center;
+   @include breakpoint-down(dw3) {
+      align-items: center;
+   }
    &__name {
       margin: 0px 0px 40px 0px;
       text-transform: uppercase;

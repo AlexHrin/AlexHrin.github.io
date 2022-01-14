@@ -3,6 +3,9 @@
    &__container {
       display: flex;
       align-items: center;
+      @include breakpoint-down(dw3) {
+         display: block;
+      }
    }
 
    &__image {

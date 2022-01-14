@@ -71,6 +71,9 @@
          font-size: 16px;
          margin: 0px 0px 10px 0px;
       }
+      @include breakpoint-down(dw3) {
+         font-size: 14px;
+      }
    }
 }
 .adress-footer {
@@ -111,6 +114,9 @@
       @include breakpoint-down(dw2) {
          font-size: 16px;
          margin: 0px 0px 10px 0px;
+      }
+      @include breakpoint-down(dw3) {
+         font-size: 14px;
       }
    }
 }
