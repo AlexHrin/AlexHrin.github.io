@@ -9,12 +9,19 @@
       line-height: 60px;
       font-weight: 900;
       margin: 0px 0px 40px 0px;
+      @media (max-width: 860px) {
+         font-size: 40px;
+         margin: 0px 0px 20px 0px;
+      }
    }
 
    &__items {
       display: flex;
       flex-wrap: wrap;
       margin: 0px -15px;
+      @include breakpoint-down(dw3) {
+         display: inline;
+      }
    }
 
    &__item {
@@ -27,18 +34,13 @@
       margin: 0 15px 30px;
       flex: 0 0 calc(33.333% - 30px);
       max-width: calc(33.333% - 30px);
+      @include breakpoint-down(dw2) {
+         padding: 20px 15px;
+      }
    }
 }
 
-.color1 {
-   color: $darkred;
-}
-
-.color2 {
-   color: $darkred;
-}
-
-.color3 {
+.color {
    color: $darkred;
 }
 
@@ -47,9 +49,17 @@
    &__name {
       margin: 0px 0px 40px 0px;
       text-transform: uppercase;
-      font-size: 43px;
+      font-size: 36px;
       line-height: 45px;
       font-weight: 900;
+      @include breakpoint-down(dw1) {
+         font-size: 30px;
+      }
+      @include breakpoint-down(dw2) {
+         font-size: 24px;
+         line-height: 30px;
+         margin: 0px 0px 10px 0px;
+      }
    }
 
    &__price {
@@ -58,6 +68,14 @@
       font-size: 40px;
       line-height: 60px;
       font-weight: 600;
+      @include breakpoint-down(dw1) {
+         font-size: 30px;
+         line-height: 30px;
+      }
+      @include breakpoint-down(dw2) {
+         font-size: 30px;
+         margin: 0px 0px 20px 0px;
+      }
    }
 
    &__text {
@@ -66,17 +84,29 @@
          font-weight: 500;
          text-align: center;
          font-size: 18px;
+         @include breakpoint-down(dw2) {
+            font-size: 14px;
+            padding: 0px 0px 15px 0px;
+         }
       }
       li:last-child {
          font-size: 20px;
          font-weight: 900;
          padding: 0px 0px 0px 0px;
          margin: 0px 0px 40px 0px;
+         @include breakpoint-down(dw2) {
+            font-size: 16px;
+            margin: 0px 0px 20px 0px;
+         }
       }
    }
    &__button {
       padding: 20px 20px;
       font-weight: 700;
       font-size: 16px;
+      @include breakpoint-down(dw2) {
+         font-size: 12px;
+         padding: 10px 10px;
+      }
    }
 }

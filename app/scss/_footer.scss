@@ -1,11 +1,21 @@
 .footer {
    background-color: black;
    color: white;
-   padding: 80px 0px 80px 0px;
+   padding: 80px 0px;
+   @include breakpoint-down(dw2) {
+      padding: 40px 0px;
+   }
+   @include breakpoint-down(dw3) {
+      padding: 20px 0px;
+   }
+
    &__container {
       display: flex;
       text-align: center;
       align-items: center;
+      @include breakpoint-down(dw3) {
+         display: block;
+      }
    }
 
    &__contacts {
@@ -22,10 +32,20 @@
 }
 
 .contacts-footer {
+   @include breakpoint-down(dw3) {
+      margin: 0px 0px 30px 0px;
+   }
    &__title {
       font-size: 25px;
       font-weight: 800;
       margin: 0px 0px 20px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 20px;
+         margin: 0px 0px 10px 0px;
+         @include breakpoint-down(dw3) {
+            font-size: 18px;
+         }
+      }
    }
 
    &__text {
@@ -33,6 +53,13 @@
       font-weight: 600;
       line-height: 20px;
       margin: 0px 0px 10px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 16px;
+         margin: 0px 0px 10px 0px;
+      }
+      @include breakpoint-down(dw3) {
+         font-size: 14px;
+      }
    }
 
    p {
@@ -40,13 +67,27 @@
       font-weight: 600;
       line-height: 20px;
       margin: 10px 0px 0px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 16px;
+         margin: 0px 0px 10px 0px;
+      }
    }
 }
 .adress-footer {
+   @include breakpoint-down(dw3) {
+      margin: 0px 0px 30px 0px;
+   }
    &__title {
       font-size: 25px;
       font-weight: 800;
       margin: 0px 0px 20px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 20px;
+         margin: 0px 0px 10px 0px;
+         @include breakpoint-down(dw3) {
+            font-size: 18px;
+         }
+      }
    }
 
    &__text {
@@ -54,28 +95,53 @@
       font-weight: 600;
       line-height: 20px;
       margin: 0px 0px 10px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 16px;
+         margin: 0px 0px 10px 0px;
+         @include breakpoint-down(dw3) {
+            font-size: 14px;
+         }
+      }
    }
    p {
       font-size: 18px;
       font-weight: 600;
       line-height: 20px;
       margin: 10px 0px 0px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 16px;
+         margin: 0px 0px 10px 0px;
+      }
    }
 }
 .backcall {
+   @include breakpoint-down(dw3) {
+      margin: 0px 0px 50px 0px;
+   }
    p {
       margin: 0px 0px 5px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 14px;
+      }
+      @include breakpoint-down(dw3) {
+         font-size: 12px;
+      }
    }
    &__title {
       font-size: 25px;
       font-weight: 800;
       margin: 0px 0px 10px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 18px;
+         margin: 0px 0px 5px 0px;
+      }
    }
 
    &__username {
    }
 
    &__userphone {
+      margin: 0px 0px 20px 0px;
    }
 
    input {
@@ -83,15 +149,26 @@
       font-size: 14px;
       background: #ffffff;
       border: 2px solid $darkred;
-
       background-color: rgba(143, 144, 166, 0.32);
       margin: 0px 0px 10px 0px;
       max-width: 180px;
+      @include breakpoint-down(dw2) {
+         font-size: 10px;
+      }
+   }
+
+   input:last-child {
+      margin: 0px 0px 20px 0px;
    }
 
    &__button {
-      padding: 10px 10px;
-      font-weight: 600;
+      padding: 5px 5px;
+      font-weight: 700;
       font-size: 12px;
+      max-width: 145px;
+      line-height: 12px;
+      @include breakpoint-down(dw2) {
+         font-size: 10px;
+      }
    }
 }

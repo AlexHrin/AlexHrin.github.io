@@ -1,14 +1,18 @@
 //Breakpoint
 $breakpoints-up: (
-   "sm": "320px",
-   "md": "768px",
-   "lg": "1230px",
+   "up5": "320px",
+   "up4": "479px",
+   "up3": "768px",
+   "up2": "991px",
+   "up1": "1230px",
 );
 
 $breakpoints-down: (
-   "sm": "319.98px",
-   "md": "767.98px",
-   "lg": "1229.98px",
+   "dw5": "319.98px",
+   "dw4": "479.98px",
+   "dw3": "679.98px",
+   "dw2": "859.98px",
+   "dw1": "1023.98px",
 );
 
 @mixin breakpoint-up($size) {

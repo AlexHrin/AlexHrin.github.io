@@ -1,13 +1,19 @@
 .main {
-   margin: 0px 0px 40px 0px;
+   margin: 120px 0px 60px 0px;
    &__container {
       display: flex;
       align-items: center;
+      @include breakpoint-down(dw3) {
+         display: block;
+      }
    }
 
    &__body {
       flex: 1 1 50%;
       max-width: 450px;
+   }
+   @include breakpoint-down(dw3) {
+      text-align: center;
    }
 
    &__image {
@@ -19,11 +25,21 @@
 }
 
 .body-main {
+   @include breakpoint-down(dw3) {
+      display: block;
+      max-width: 679.98px;
+      margin: 0px 0px 40px 0px;
+   }
    &__title {
       font-size: 56px;
       line-height: 60px;
       font-weight: 800;
       margin: 0px 0px 30px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 40px;
+         line-height: 40px;
+         margin: 0px 0px 15px 0px;
+      }
    }
 
    &__text {
@@ -31,13 +47,26 @@
       line-height: 36px;
       font-weight: 500;
       margin: 0px 0px 40px 0px;
+      @include breakpoint-down(dw2) {
+         font-size: 16px;
+         line-height: 26px;
+         margin: 0px 0px 20px 0px;
+      }
    }
 
    &__button {
       width: 100%;
       max-width: 370px;
-      padding: 10px 10px;
+      padding: 15px 10px;
       font-weight: 700;
       font-size: 18px;
+      @include breakpoint-down(dw2) {
+         font-size: 14px;
+         padding: 10px 10px;
+      }
+      @include breakpoint-down(dw3) {
+         font-size: 12px;
+         max-width: 220px;
+      }
    }
 }
