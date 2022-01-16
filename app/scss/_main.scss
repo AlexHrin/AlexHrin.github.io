@@ -21,6 +21,9 @@
    }
    img {
       width: 100%;
+      @include breakpoint-down(dw2) {
+         width: 90%;
+      }
    }
 }
 
@@ -63,6 +66,7 @@
       @include breakpoint-down(dw2) {
          font-size: 14px;
          padding: 10px 10px;
+         max-width: 250px;
       }
       @include breakpoint-down(dw3) {
          font-size: 12px;
