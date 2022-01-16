@@ -39,6 +39,10 @@
       }
       @include breakpoint-down(dw3) {
          display: block;
+         max-width: 400px;
+         margin: 0 auto 30px;
+      }
+      @include breakpoint-down(dw4) {
          max-width: 300px;
       }
    }

@@ -8,6 +8,12 @@
           box-sizing: border-box;
 }
 
+@media (max-width: 679.98px) {
+  * {
+    scroll-margin-top: 95px;
+  }
+}
+
 a,
 a:visited,
 a:focus a:hover {
@@ -20,31 +26,18 @@ li {
   list-style: none;
 }
 
-ul img,
-ol img,
-li img {
+img {
   max-width: 100%;
   height: auto;
+  vertical-align: top;
 }
 
-ul h1,
-ul h2,
-ul h3,
-ul h4,
-ul h5,
-ul h6,
-ol h1,
-ol h2,
-ol h3,
-ol h4,
-ol h5,
-ol h6,
-li h1,
-li h2,
-li h3,
-li h4,
-li h5,
-li h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: inherit;
   font-size: inherit;
 }
@@ -58,6 +51,16 @@ body {
 
 body._lock {
   overflow: hidden;
+}
+
+@media (max-width: 679.98px) {
+  body._lock {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 ._container {
@@ -534,6 +537,13 @@ body._lock {
 @media (max-width: 679.98px) {
   .services__item {
     display: block;
+    max-width: 400px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .services__item {
     max-width: 300px;
   }
 }
@@ -711,6 +721,7 @@ body._lock {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
           flex: 1 1 50%;
+  margin: 0px 0px 30px 0px;
 }
 
 @media (max-width: 679.98px) {
@@ -756,10 +767,14 @@ body._lock {
 
 @media (max-width: 679.98px) {
   .body-input {
-    max-width: 350px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .body-input {
+    max-width: 300px;
   }
 }
 
