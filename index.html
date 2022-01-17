@@ -246,7 +246,7 @@
          <div class="footer__contacts contacts-footer">
             <div class="contacts-footer__title">Контакти</div>
             <div class="contacts-footer__text">+38(050)107-44-88 <br> Олександр
-               <p>avtozakarpattya@gmail.com</p>
+               <p>zakavtopidbir@gmail.com</p>
             </div>
          </div>
          <div class="footer__adress adress-footer">
@@ -257,10 +257,10 @@
          </div>
          <div class="footer__backcall backcall test">
             <div class="backcall__title">Залишились питання?</div>
-            <form action="#" method="get">
+            <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                <div>
                   <p>Ваше ім’я</p>
-                  <input placeholder="Ім’я" tabindex="1" type="text" name="username" class="backcall__username">
+                  <input placeholder="Ім’я" tabindex="1" name="name" type="text" class="backcall__username">
                </div>
                <div>
                   <p>Ваш номер телефону</p>
