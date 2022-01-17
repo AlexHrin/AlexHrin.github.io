@@ -158,10 +158,10 @@
             <div class="input__body body-input">
                <div class="body-input__title">Хочете замовити огляд? <br> Залиште свою заявку</div>
                <div class="body-input__box">
-                  <form action="#" method="get">
+                  <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
                      <div>
                         <p>Ваше ім’я</p>
-                        <input placeholder="Ім’я" tabindex="1" type="text" name="username" class="body-input__username">
+                        <input placeholder="Ім’я" tabindex="1" type="text" name="name" class="body-input__username">
                      </div>
                      <div>
                         <p>Ваш номер телефону</p>
@@ -257,10 +257,10 @@
          </div>
          <div class="footer__backcall backcall test">
             <div class="backcall__title">Залишились питання?</div>
-            <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+            <form action="#" method="post">
                <div>
                   <p>Ваше ім’я</p>
-                  <input placeholder="Ім’я" tabindex="1" name="name" type="text" class="backcall__username">
+                  <input placeholder="Ім’я" tabindex="1" type="text" name="username" class="backcall__username">
                </div>
                <div>
                   <p>Ваш номер телефону</p>
