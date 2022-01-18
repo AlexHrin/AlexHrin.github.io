@@ -104,7 +104,11 @@
          font-size: 20px;
          font-weight: 900;
          padding: 0px 0px 0px 0px;
-         margin: 0px 0px 40px 0px;
+         margin: 0px 0px 30px 0px;
+         span {
+            color: $red;
+            font-size: 12px;
+         }
          @include breakpoint-down(dw2) {
             font-size: 16px;
             margin: 0px 0px 20px 0px;

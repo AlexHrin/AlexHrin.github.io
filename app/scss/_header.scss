@@ -7,7 +7,6 @@
    width: 100%;
    z-index: 2;
    background-color: #fff;
-   //border-bottom: solid $red 2px;
 
    &__container {
       height: 93px;
@@ -15,9 +14,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @include breakpoint-down(dw3) {
-         //height: 50px;
-      }
    }
 
    &__logo {
@@ -153,13 +149,15 @@
 
    &__item {
       text-align: center;
-
       margin: 0 10px;
    }
 
    &__link {
       padding-left: 10px;
       color: black;
+      &:hover {
+         color: $darkred;
+      }
       @include breakpoint-down(dw2) {
          font-size: 30px;
       }

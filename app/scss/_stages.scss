@@ -67,7 +67,7 @@
    &__title {
       text-decoration: underline;
       font-size: 30px;
-      line-height: 30px;
+      line-height: 36px;
       font-weight: 700;
       margin: 0px 0px 20px 0px;
       @include breakpoint-down(dw2) {
@@ -84,7 +84,7 @@
 
    &__text {
       text-align: justify;
-      font-size: 22px;
+      font-size: 20px;
       line-height: 36px;
       font-weight: 500;
       @include breakpoint-down(dw2) {
