@@ -9,9 +9,7 @@
 }
 
 * {
-   @include breakpoint-down(dw3) {
-      scroll-margin-top: 95px;
-   }
+   scroll-margin-top: 95px;
 }
 
 a,

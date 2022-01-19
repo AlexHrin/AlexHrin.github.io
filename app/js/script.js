@@ -42,6 +42,7 @@ if (menuLinks.length > 0) {
 // Отправка данных на сервер
 function send(event, php) {
    console.log("Отправка запроса");
+   console.log(php);
    event.preventDefault ? event.preventDefault() : event.returnValue = false;
    var req = new XMLHttpRequest();
    req.open('POST', php, true);

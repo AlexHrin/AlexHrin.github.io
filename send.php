@@ -6,7 +6,7 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
-$email = $_POST['userphone'];
+$text = $_POST['userphone'];
 //$text = $_POST['text'];
 //$file = $_FILES['myfile'];
 
@@ -30,11 +30,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'hrinsasha@gmail.com'; // Логин на почте
-    $mail->Password   = 'qptrwthdimeykhtg'; // Пароль на почте
+    $mail->Username   = 'zakavtopidbir'; // Логин на почте
+    $mail->Password   = 'sasha22060404'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('hrinsasha@gmail.com', 'Alex'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('zakavtopidbir@gmail.com', 'Alex'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('hrinsasha@hotmail.com');  
