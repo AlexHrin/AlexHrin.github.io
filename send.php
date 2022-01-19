@@ -1,70 +1,41 @@
 <?php
-// Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
-
-// Переменные, которые отправляет пользователь
-$name = $_POST['name'];
-$text = $_POST['userphone'];
-//$text = $_POST['text'];
-//$file = $_FILES['myfile'];
-
-// Формирование самого письма
-$title = "Заказ на осмотр";
-$body = "
-<h2>Новое письмо</h2>
-<b>Имя:</b> и$name<br>
-<b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$text
-";
-
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-try {
-    $mail->isSMTP();   
-    $mail->CharSet = "UTF-8";
-    $mail->SMTPAuth   = true;
-    $mail->SMTPDebug = 2;
-    $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
-
-    // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'zakavtopidbir'; // Логин на почте
-    $mail->Password   = 'sasha22060404'; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('zakavtopidbir@gmail.com', 'Alex'); // Адрес самой почты и имя отправителя
-
-    // Получатель письма
-    $mail->addAddress('hrinsasha@hotmail.com');  
-
-    // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }   
-}
-// Отправка сообщения
-$mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
-
-// Проверяем отравленность сообщения
-if ($mail->send()) {$result = "success";} 
-else {$result = "error";}
-
-} catch (Exception $e) {
-    $result = "error";
-    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-}
-
-// Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+ 
+require_once '/PHPMailer/src/Exception.php';
+require_once '/PHPMailer/src/PHPMailer.php';
+require_once '/PHPMailer/src/SMTP.php';
+ 
+// Для более ранних версий PHPMailer
+//require_once '/PHPMailer/PHPMailerAutoload.php';
+ 
+$mail = new PHPMailer;
+$mail->CharSet = 'UTF-8';
+ 
+// Настройки SMTP
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+$mail->SMTPDebug = 0;
+ 
+$mail->Host = 'ssl://smtp.gmail.com';
+$mail->Port = 465;
+$mail->Username = 'zakavtopidbir@gmail.com';
+$mail->Password = 'sasha22060404';
+ 
+// От кого
+$mail->setFrom('zakavtopidbir@gmail.com', 'ALEX');		
+ 
+// Кому
+$mail->addAddress('hrinsasha@hotmail.com', 'Sasha');
+ 
+// Тема письма
+$mail->Subject = $subject;
+ 
+// Тело письма
+$body = '<p><strong>«Hello, world!» </strong></p>';
+$mail->msgHTML($body);
+ 
+// Приложение
+$mail->addAttachment(__DIR__ . '/image.jpg');
+ 
+$mail->send();
