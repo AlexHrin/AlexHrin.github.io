@@ -12,7 +12,7 @@ if($_POST){
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
         //Server settings
-        $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+      //  $mail->SMTPDebug = 2;                                 // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -23,7 +23,7 @@ if($_POST){
 
         //Recipients
         $mail->setFrom('hrinsasha@gmail.com', 'Test');
-        $mail->addAddress('info@minecash.ru', 'Владельцу ресурса MineCash.ru');     // Add a recipient
+        $mail->addAddress('hrinsasha@hotmail.com', 'Владельцу ресурса MineCash.ru');     // Add a recipient
 
 
         //Content
@@ -34,9 +34,9 @@ if($_POST){
                         <title>Новая заявка с сайта</title>
                     </head>
                     <body>
-                        <p>Имя: '.$_POST['name'].'</p>
-                        <p>Телефон: '.$_POST['phone'].'</p>                        
-                        <p>Сообщение: '.$_POST['message'].'</p>                        
+                        <p>Name: '.$_POST['name'].'</p>
+                        <p>Phone: '.$_POST['phone'].'</p>
+                        <p>Type: '.$_POST['type'].'</p>
                     </body>
                 </html>';
 

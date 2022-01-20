@@ -191,20 +191,27 @@
                <img src="img/xtrail.webp" alt="xtrail">
             </div>
             <div class="input__body body-input">
-               <div class="body-input__title">Хочете замовити огляд? <br> Залиште свою заявку</div>
+               <div class="body-input__title form-title">Хочете замовити огляд? <br> Залиште свою заявку</div>
                <div class="body-input__box">
-                  <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
+                  <form id="form" class="form main-form" method="post" action="">
                      <div>
                         <p>Ваше ім’я</p>
-                        <input placeholder="Ім’я" tabindex="1" type="text" name="name" class="body-input__username">
+                        <input placeholder="Ім’я" tabindex="1" type="text" name="name" class="body-input__username"
+                           data-valid="required">
+                        <span></span>
                      </div>
                      <div>
                         <p>Ваш номер телефону</p>
-                        <input placeholder="+38(050)-000-00-00" tabindex="2" type="tel" name="userphone"
-                           class="body-input__userphone">
+                        <input placeholder="+38(050)-000-00-00" tabindex="2" type="tel" name="phone"
+                           data-valid="required" data-phone class="body-input__userphone">
+                        <span></span>
                      </div>
-                     <button type="submit" class="body-input__button _btn">Відправити</button>
+                     <div style="display: none">
+                        <input type="text" name="type" class="body-input__userphone hide" value="view">
+                     </div>
+                     <input class="body-input__button _btn" type="submit" value="Відправити">
                   </form>
+                  <div style="display: none">Success</div>
                </div>
             </div>
          </div>
@@ -275,19 +282,6 @@
             </div>
          </div>
       </section>
-      <form id="userData" class="form" method="post" action="">
-         <h3 class="form__title">Получить консультацию</h3>
-         <div class="form__fields">
-            <input name="name" class="form__input" type="text" placeholder="Ваше имя"
-               data-valid="required"><span></span>
-            <input name="phone" class="form__input form__input--split" type="tel" placeholder="Ваше номер"
-               data-valid="required" data-phone><span></span>
-            <input name="email" id="email" class="form__input form__input--split" type="email" placeholder="Ваш e-mail"
-               data-valid="required" data-email><span></span>
-            <textarea name="message" class="form__input" placeholder="Ваше сообщение" rows="15"></textarea>
-         </div>
-         <input class="button button__form" type="submit" value="отправить">
-      </form>
    </main>
    <footer id="block4" class="footer">
       <div class="footer__container _container">
@@ -303,23 +297,32 @@
                <p>Щоденно 09:00-21:00</p>
             </div>
          </div>
-         <div class="footer__backcall backcall test">
-            <div class="backcall__title">Залишились питання?</div>
-            <form action="#" method="post">
+         <div class="footer__backcall backcall">
+            <div class="backcall__title form-title">Залишились питання?</div>
+            <form id="form" class="form main-form" method="post" action="">
                <div>
                   <p>Ваше ім’я</p>
-                  <input placeholder="Ім’я" tabindex="1" type="text" name="username" class="backcall__username">
+                  <input placeholder="Ім’я" tabindex="1" type="text" name="name" class="backcall__username"
+                     data-valid="required">
+                  <span></span>
                </div>
                <div>
                   <p>Ваш номер телефону</p>
-                  <input placeholder="+38(050)-000-00-00" tabindex="2" type="tel" name="userphone"
-                     class="backcall__userphone">
+                  <input placeholder="+38(050)-000-00-00" tabindex="2" type="tel" name="phone" data-valid="required"
+                     data-phone class="backcall__userphone">
+                  <span></span>
                </div>
-               <button type="submit" class="backcall__button _btn">Отримати консультацію</button>
+               <div style="display: none">
+                  <input type="text" name="type" class="body-input__userphone hide" value="consultation">
+               </div>
+               <input class="backcall__button _btn" type="submit" value="Відправити">
             </form>
+            <div style="display: none">Success</div>
          </div>
       </div>
    </footer>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
    <script src="/app/js/script.js"></script>
 </body>
 

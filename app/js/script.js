@@ -39,32 +39,41 @@ if (menuLinks.length > 0) {
 }
 
 $(document).ready(function () {
-   $('#userData').submit(function () {
+   $('.main-form').submit(function (e) {
+      e.preventDefault();
       let errors = false;
-      $(this).find('span').empty();
+      let form = $(this);
 
-      $(this).find('input, textarea').each(function () {
-         if ($.trim($(this).val()) == '') {
-            errors = true;
-            $(this).next().text('Не заполнено поле ');
+      $(this).find('input').each(function () {
+         if (!$(this).hasClass("hide")) {
+            if ($.trim($(this).val()) == '') {
+               errors = true;
+               $(this).next().text('Не заполнено поле ');
+            }
          }
       });
 
       if (!errors) {
-         let data = $('#userData').serialize();
+         let data = $(this).serialize();
+         console.log(data);
          $.ajax({
-            url: 'index.php',
+            url: 'send.php',
             type: 'POST',
             data: data,
             success: function (res) {
-               if (data['error']) {
-                  alert(data['error']);
-               } else {
-                  console.log('Письмo oтврaвлeнo!');
-               }
+               form[0].reset();
+               form.parent().find('.form-title').css("display", "none");
+               form.css("display", "none");
+               form.next().css("display", "block");
+
+               setTimeout(function () {
+                  form.parent().find('.form-title').css("display", "block");
+                  form.css("display", "block");
+                  form.next().css("display", "none");
+               }, 4000);
             },
             error: function () {
-               alert('Ошибка');
+               console.log('Ошибка');
             }
          });
       }
