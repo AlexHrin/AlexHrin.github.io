@@ -48,7 +48,7 @@ $(document).ready(function () {
          if (!$(this).hasClass("hide")) {
             if ($.trim($(this).val()) == '') {
                errors = true;
-               $(this).next().text('Не заполнено поле ');
+               $(this).next().text('Не заповнено поле ');
             }
          }
       });

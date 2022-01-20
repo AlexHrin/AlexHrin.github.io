@@ -23,15 +23,15 @@ if($_POST){
 
         //Recipients
         $mail->setFrom('hrinsasha@gmail.com', 'Test');
-        $mail->addAddress('hrinsasha@hotmail.com', 'Владельцу ресурса MineCash.ru');     // Add a recipient
+        $mail->addAddress('hrinsasha@hotmail.com', 'Avtopidbirzak');     // Add a recipient
 
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'Новая заявка с сайта MineCash.ru';
+        $mail->Subject = 'New order';
         $mail->Body    = ' <html>
                     <head>
-                        <title>Новая заявка с сайта</title>
+                        <title>New Order from the site</title>
                     </head>
                     <body>
                         <p>Name: '.$_POST['name'].'</p>
